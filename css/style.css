@@ -138,15 +138,14 @@
 
 .chat-list {
   height: calc(100% - 200px);
-  background-color: #fff;
-  display: flex;
-  justify-content: flex-end;
+  background-color: #FAFAFA;
+  overflow-y: auto;
 }
 
-.right-line {
-  width: 4%;
-  background-color: #FAFAFA;
-  border-left: 1px solid #DADADA;
+.wrapper {
+  height: 100%;
+  width: 96%;
+  border-right: 1px solid #DADADA;
 }
 
 .chat-user {
@@ -155,8 +154,12 @@
   background-color: #FAFAFA;
   align-items: center;
   justify-content: center;
-  width: 96%;
-  border-top: 1px solid #F5F5F5;
+  border-top: 1px solid #F0F0F0;
+}
+
+.chat-user:hover {
+  background-color: #E9EBEB;
+  cursor: pointer;
 }
 
 .chat-user .propic-chat {
