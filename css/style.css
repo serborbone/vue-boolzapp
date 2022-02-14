@@ -198,8 +198,6 @@
 .data-chat-showed {
   height: 70px;
   background-color: #EAEAEA;
-  position: fixed;
-  width: calc(1180px - 354px);
   display: flex;
   align-items: center;
 }
@@ -242,7 +240,6 @@
 /* Sezione messaggi chat aperta */
 
 .msg-section {
-  margin-top: 70px;
   height: calc(100% - 140px);
   background-image: url('../img/mine.jpg');
   background-position: center;
@@ -291,7 +288,7 @@
 /* SEZIONE INVIO MESSAGGIO */
 .input-msg {
   height: 70px;
-  background-color: #F3EEEA; /*da eliminare*/
+  background-color: #F3EEEA;
   position: fixed;
   width: calc(1180px - 354px);
   display: flex;
