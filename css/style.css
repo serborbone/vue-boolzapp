@@ -25,7 +25,6 @@
   height: calc(100vh - 30px);
   z-index: 99;
   margin: 15px auto 0 auto;
-  background-color: purple;
   display: flex;
   font-family: 'Roboto', sans-serif;
 }
@@ -34,7 +33,7 @@
 .user-menu-left {
   width: 30%;
   height: 100%;
-  border-right: 1px solid #EAEAEA;
+  border-right: 1px solid #DADADA;
 }
 
 /* Dimensioni chat dx */
@@ -46,8 +45,7 @@
 /* Classi div info USER */
 .user-menu-left .user {
   height: 70px;
-  /* background-color: #EAEAEA; */
-  background-color: #c3c3c3;
+  background-color: #EAEAEA;
   display: flex;
   align-items: center;
 }
@@ -79,7 +77,8 @@
 .btn-user .fa-solid {
   margin-left: 18px;
   font-size: 22px;
-  /*color: #B1B1B1;*/ /*colore da impostare*/
+  color: #B1B1B1;
+  cursor: pointer;
 }
 
 /* Classi div Notifiche Desktop */
@@ -147,13 +146,13 @@
 .right-line {
   width: 4%;
   background-color: #FAFAFA;
-  border-left: 1px solid #EAEAEA;
+  border-left: 1px solid #DADADA;
 }
 
 .chat-user {
   height: 80px;
   display: flex;
-  background-color: #c3c3c3;
+  background-color: #FAFAFA;
   align-items: center;
   justify-content: center;
   width: 96%;
@@ -181,15 +180,13 @@
 }
 
 .top-text .time-date {
-  /*color: #B7BABC; colore originale */
-  color: grey;
+  color: #B7BABC;
   font-size: 12px;
 }
 
 .bottom-text {
   font-size: 12px;
-  /*color: #B7BABC; colore originale */
-  color: grey;
+  color: #B7BABC;
   margin-top: 5px;
 }
 
@@ -197,7 +194,7 @@
 
 .data-chat-showed {
   height: 70px;
-  background-color: #c3c3c3;
+  background-color: #EAEAEA;
   position: fixed;
   width: calc(1180px - 354px);
   display: flex;
@@ -235,6 +232,8 @@
 
 .chat-btn .fa-solid {
   margin-left: 18px;
+  color: #B1B1B1;
+  cursor: pointer;
 }
 
 /* Sezione messaggi chat aperta */
@@ -250,18 +249,11 @@
 
   display: flex;
   justify-content: center;
-  padding-top: 12px;
-  padding-bottom: 10px;
-}
-
-.msg-section {
-  
+  padding-top: 20px;
 }
 
 .msg-wrap {
-  width: 80%;
-  border: 1px solid #000;
-  padding: 0 20px 0 20px;
+  min-width: 80%;
 }
 
 .msg-send:after {
@@ -296,7 +288,7 @@
 /* SEZIONE INVIO MESSAGGIO */
 .input-msg {
   height: 70px;
-  background-color: #1D9688; /*da eliminare*/
+  background-color: #F3EEEA; /*da eliminare*/
   position: fixed;
   width: calc(1180px - 354px);
   display: flex;
@@ -313,6 +305,7 @@
   justify-content: center;
   align-items: center;
   font-size: 23px;
+  color: #6B7377;
 }
 
 .input-msg .send-msg {
@@ -325,4 +318,6 @@
   width: 100%;
   height: 100%;
   padding-left: 15px;
+  border: none;
+  border-radius: 5px ;
 }
