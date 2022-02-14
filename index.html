@@ -10,7 +10,7 @@
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">     
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="css/style.css">
 
@@ -71,14 +71,93 @@
 
                   <!-- ELENCO chat disponibili -->
                   <div class="chat-list">
+
+                      <!-- CHAT disponibile -->
                       <div class="chat-user">
+
+                          <div class="propic-chat">
+                              <img src="img/avatar_1.jpg">
+                          </div>
+
+                          <!-- Nome utente, testo messaggio, ora e data -->
+                          <div class="chat-text">
+
+                              <!-- sezione top con nome utente, data e ora messaggio -->
+                              <div class="top-text">
+                                  <span class="name-chat">
+                                      Michele
+                                  </span>
+
+                                  <span class="time-date">
+                                      10/01/2020 16:15:22
+                                  </span>
+                              </div>
+
+                              <!-- sezione bottom con testo messaggio -->
+                              <div class="bottom-text">
+                                  <span class="text-message">
+                                    Tutto fatto...
+                                  </span>
+                              </div>
+
+                          </div>
+
                       </div>
+                      <!-- FINE Chat disponibile -->
+
+                        <!-- Linea a dx stilizzata del div chat list -->
+                       <div class="right-line">
+                      </div>
+
                   </div>
 
               </div>
 
               <!-- Chat a destra -->
               <div class="chat-right">
+
+                  <!-- INFO CHAT aperta -->
+                  <div class="data-chat-showed">
+
+                      <div class="current-chat-propic">
+                          <img src="img/avatar_1.jpg" alt="">
+                      </div>
+
+                      <div class="info-current-chat">
+                          <span class="current-user">Michele</span>
+                          <div class="current-last-acc">Ultimo accesso oggi alle 10/01/2020</div>
+                          <div class="hour-access">16:15:22</div>
+                      </div>
+
+                      <div class="chat-btn">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <i class="fa-solid fa-paperclip"></i>
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                      </div>
+
+                  </div>
+
+                  <!-- SEZIONE Messaggi Chat Aperta -->
+                  <div class="msg-section">
+
+                  </div>
+
+                  <!-- BARRA invio messaggio -->
+                  <div class="input-msg">
+                      <div class="emoticon">
+                          <i class="fa-regular fa-face-smile"></i>
+                      </div>
+
+                      <div class="send-msg">
+                          <input type="text" placeholder="Scrivi un messaggio">
+                      </div>
+
+                      <div class="audio">
+                          <i class="fa-solid fa-microphone"></i>
+                      </div>
+
+                  </div>
+
               </div>
 
           </div>
