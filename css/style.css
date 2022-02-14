@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#background-page {
+  background-color: #DADBD4;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#green-bar {
+  height: 100px;
+  width: 100%;
+  background-color: #1D9688;
+}
+
+.container {
+  min-width: 500px;
+  width: 1180px;
+  height: calc(100vh - 30px);
+  background-color: blueviolet;
+  z-index: 99;
+  margin: 15px auto 0 auto;
+
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Dimensioni menu sx */
+.user-menu-left {
+  width: 30%;
+  height: 100%;
+  background-color: aqua;
+}
+
+/* Dimensioni chat dx */
+.chat-right {
+  width: 70%;
+  height: 100%;
+}
+
+/* Classi div info USER */
+.user-menu-left .user {
+  height: 70px;
+  /* background-color: #EAEAEA; */
+  background-color: #c3c3c3;
+  display: flex;
+  align-items: center;
+}
+
+.user-data {
+  height: 50px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.user-data img {
+  height: 100%;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.btn-user {
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 25px;
+}
+
+.btn-user .fa-solid {
+  margin-left: 18px;
+  font-size: 22px;
+  /*color: #B1B1B1;*/ /*colore da impostare*/
+}
+
+/* Classi div Notifiche Desktop */
+.desktop-msg {
+  height: 80px;
+  background-color: #8EDAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop-msg .bell-icon {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  color: #8EDAFC;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.desktop-msg .txt-desktop p {
+  font-size: 14px;
+}
+
+.desktop-msg .txt-desktop span a {
+  font-size: 13px;
+  color: #578194;
+}
+
+/* Search Input */
+.search {
+  height: 50px;
+  background-color: #c3c3c3;
+  display: flex;
+  align-items: center;
+  padding: 0 6px 0 6px;
+}
+
+.search .fa-solid {
+  position: absolute;
+  margin-left: 10px;
+  color: #B6B9BB;
+}
+
+.search input {
+  width: 100%;
+  height: 35px;
+  padding-left: 35px;
+}
+
+/* LISTA Chat disponibili */
+
+.chat-list {
+  height: 100%;
+  background-color: #1D9688;
+}
