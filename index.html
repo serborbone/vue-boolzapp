@@ -74,7 +74,7 @@
 
                       <!-- CHAT disponibile -->
                       <div class="wrapper">
-                          <div class="chat-user" v-for="(users, index) in user">
+                          <div class="chat-user" v-for="(users, indice) in user" @click="changeActive(indice)">
 
                               <div class="propic-chat">
                                   <img :src="users.img">
@@ -118,11 +118,11 @@
                   <div class="data-chat-showed">
 
                       <div class="current-chat-propic">
-                          <img src="img/avatar_1.jpg" alt="">
+                          <img :src="user[active].img" alt="">
                       </div>
 
                       <div class="info-current-chat">
-                          <span class="current-user">Michele</span>
+                          <span class="current-user">{{user[active].name}}</span>
                           <div class="current-last-acc">Ultimo accesso oggi alle 10/01/2020</div>
                           <div class="hour-access">16:15:22</div>
                       </div>
@@ -138,35 +138,17 @@
                   <!-- SEZIONE Messaggi Chat Aperta -->
                   <div class="msg-section">
 
-                      <!-- MESSAGGI RICEVUTI -->
-                      <div class="msg-wrap" v-for="msg in user.messages">
+                      <div class="msg-wrap">
                           
-                          <!-- MESSAGGI INVIATI -->
-                          <div class="msg-send">
-                              <div class="msg-box my-msg">
-                                  <div class="text-my-msg" v-if="msg.status == 'sent' ">
-                                      {{msg.text}}
-                                  </div>
-
-                                  <div class="hour-msg">10/01/2020 15:30:55</div>
-                              </div>
-                          </div>
-
-                          <!-- MESSAGGI RICEVUTI -->
-                          <div class="msg-received">
-                              <div class="msg-box msg-other">
-                                  <div class="text-my-msg">
-                                      Ciao ciao ciao
-                                  </div>
-
-                                  <div class="hour-msg">10/01/2020 15:30:55</div>
+                          <!-- MESSAGGI -->
+                          <div class="msg-send" v-for="message in user[active].messages">
+                              <div class="msg-box" :class="message.status == 'sent'? 'my-msg': 'msg-other' ">
+                                {{message.text}}
+                                <div class="hour-msg">{{message.date}}</div>
                               </div>
                           </div>
 
                       </div>
-
-                       <!-- MESSAGGI MANDATI -->
-                          
 
                   </div>
 
