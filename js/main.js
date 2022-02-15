@@ -31,7 +31,7 @@ const app = new Vue({
                       text: 'Tutto fatto!',
                       status: 'received',
                   },
-
+                  
               ],
 
             },
@@ -259,22 +259,31 @@ const app = new Vue({
     },
 
     methods: {
-    
+
+        //assegno come valore ad active l'indice della chat che clicco
         changeActive(index) {
         
             this.active = index;
 
         },
 
+        //pusho in messages il testo che ho scritto nell'input così da mostrarlo in chat
         sendMessage() {
-        
+
             this.user[this.active].messages.push({date: '10/01/2020 16:15:22', text: this.inputValue, status: 'sent', });
             this.inputValue = '';
+
+            //chiamo la funzione con il messaggio di risposta in ritardo di 1 secondo
+            setTimeout(this.answerMessage, 1000);
         },
 
+        answerMessage() {
+
+            //pusho in messages un messaggio di risposta che vado a chiamare nella funzione sendMessage()
+            this.user[this.active].messages.push({date: '10/01/2020 16:15:22', text: 'ok', status: 'received', });
         
+        }   
     
     }
-
 
 })

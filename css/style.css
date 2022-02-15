@@ -265,7 +265,7 @@
   min-width: 85%;
 }
 
-.msg-send:after {
+.msg-container:after {
   display: table;
   clear: both;
   content: "";

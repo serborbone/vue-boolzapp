@@ -117,16 +117,19 @@
                   <!-- INFO CHAT aperta -->
                   <div class="data-chat-showed">
 
+                      <!-- PROPIC Utente Chat aperta -->
                       <div class="current-chat-propic">
                           <img :src="user[active].img" alt="">
                       </div>
 
+                      <!-- NOME UTENTE chat aperta -->
                       <div class="info-current-chat">
                           <span class="current-user">{{user[active].name}}</span>
                           <div class="current-last-acc">Ultimo accesso oggi alle 10/01/2020</div>
                           <div class="hour-access">16:15:22</div>
                       </div>
 
+                      <!-- ICONE CHAT -->
                       <div class="chat-btn">
                           <i class="fa-solid fa-magnifying-glass"></i>
                           <i class="fa-solid fa-paperclip"></i>
@@ -141,7 +144,7 @@
                       <div class="msg-wrap">
                           
                           <!-- MESSAGGI -->
-                          <div class="msg-send" v-for="message in user[active].messages">
+                          <div class="msg-container" v-for="message in user[active].messages">
                               <div class="msg-box" :class="message.status == 'sent'? 'my-msg': 'msg-other' ">
                                 {{message.text}}
                                 <div class="hour-msg">{{message.date}}</div>
@@ -159,8 +162,9 @@
                           <i class="fa-regular fa-face-smile"></i>
                       </div>
 
+                      <!-- INPUT -->
                       <div class="send-msg">
-                          <input type="text" v-on:keyup.enter="sendMessage()" v-model="inputValue" placeholder="Scrivi un messaggio">
+                          <input type="text" v-on:keyup.enter="sendMessage" v-model="inputValue" placeholder="Scrivi un messaggio">
                       </div>
 
                       <div class="audio">
