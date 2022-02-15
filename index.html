@@ -90,14 +90,14 @@
                                       </span>
 
                                       <span class="time-date">
-                                          10/01/2020 16:15:22
+                                          {{users.messages[users.messages.length - 1].date}}
                                       </span>
                                   </div>
 
                                   <!-- sezione bottom con testo messaggio -->
                                   <div class="bottom-text">
                                       <span class="text-message">
-                                        Tutto fatto...
+                                          {{users.messages[users.messages.length - 1].text}}
                                       </span>
                                   </div>
 
@@ -139,19 +139,13 @@
                   <div class="msg-section">
 
                       <!-- MESSAGGI RICEVUTI -->
-                      <div class="msg-wrap">
+                      <div class="msg-wrap" v-for="msg in user.messages">
                           
                           <!-- MESSAGGI INVIATI -->
                           <div class="msg-send">
                               <div class="msg-box my-msg">
-                                  <div class="text-my-msg">
-                                      Hai portato fuori il cane?
-                                      Hai portato fuori il cane?
-                                      Hai portato fuori il cane?
-                                      Hai portato fuori il cane?
-                                      Hai portato fuori il cane?
-                                      Hai portato fuori il cane?
-                                      Hai portato fuori il cane?
+                                  <div class="text-my-msg" v-if="msg.status == 'sent' ">
+                                      {{msg.text}}
                                   </div>
 
                                   <div class="hour-msg">10/01/2020 15:30:55</div>
@@ -178,6 +172,7 @@
 
                   <!-- BARRA invio messaggio -->
                   <div class="input-msg">
+
                       <div class="emoticon">
                           <i class="fa-regular fa-face-smile"></i>
                       </div>
