@@ -4,6 +4,9 @@ const app = new Vue({
     data: {
 
         active: 0,
+
+        inputValue: '',
+
         user: [
         
             {
@@ -53,6 +56,60 @@ const app = new Vue({
                   {            
                       date: '10/01/2020 16:21:22',
                       text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                      status: 'sent',
+                  },
+
+                  {            
+                      date: '10/01/2020 16:21:22',
+                      text: 'Possiamo fare un altro giorno',
+                      status: 'sent',
+                  },
+
+                    {            
+                      date: '10/01/2020 16:29:10',
+                      text: 'Va benissimo',
+                      status: 'received',
+                  },
+
+                  {            
+                      date: '10/01/2020 16:21:22',
+                      text: 'Ti va bene martedì?',
+                      status: 'sent',
+                  },
+
+                  {            
+                      date: '10/01/2020 16:21:22',
+                      text: 'Meglio mercoledì',
+                      status: 'received',
+                  },
+
+                    {            
+                      date: '10/01/2020 16:29:10',
+                      text: 'Ok?',
+                      status: 'received',
+                  },
+
+                  {            
+                      date: '10/01/2020 16:21:22',
+                      text: 'Posso dirlo anche agli altri',
+                      status: 'received',
+                  },
+
+                    {            
+                      date: '10/01/2020 16:29:10',
+                      text: 'Sperando che possano stavolta',
+                      status: 'received',
+                  },
+
+                  {            
+                      date: '10/01/2020 16:21:22',
+                      text: 'Perfetto!',
+                      status: 'sent',
+                  },
+
+                  {            
+                      date: '10/01/2020 16:21:22',
+                      text: 'Fammi sapere',
                       status: 'sent',
                   },
 
@@ -206,10 +263,18 @@ const app = new Vue({
         changeActive(index) {
         
             this.active = index;
-            console.log(this.active);
+
+        },
+
+        sendMessage() {
         
-        }
+            this.user[this.active].messages.push({date: '10/01/2020 16:15:22', text: this.inputValue, status: 'sent', });
+            this.inputValue = '';
+        },
+
+        
     
     }
+
 
 })

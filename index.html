@@ -160,7 +160,7 @@
                       </div>
 
                       <div class="send-msg">
-                          <input type="text" placeholder="Scrivi un messaggio">
+                          <input type="text" v-on:keyup.enter="sendMessage()" v-model="inputValue" placeholder="Scrivi un messaggio">
                       </div>
 
                       <div class="audio">
