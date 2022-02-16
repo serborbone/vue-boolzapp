@@ -330,3 +330,7 @@
   border: none;
   border-radius: 5px ;
 }
+
+.d-none {
+  display: none;
+}

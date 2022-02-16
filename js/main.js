@@ -7,11 +7,14 @@ const app = new Vue({
 
         inputValue: '',
 
+        searchValue: '',
+
         user: [
         
             {
               name: 'Michele',
               img: 'img/avatar_1.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -39,6 +42,7 @@ const app = new Vue({
             {
               name: 'Fabio',
               img: 'img/avatar_2.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -119,6 +123,7 @@ const app = new Vue({
             {
               name: 'Samuele',
               img: 'img/avatar_3.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -145,6 +150,7 @@ const app = new Vue({
             {
               name: 'Mario',
               img: 'img/avatar_4.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -165,6 +171,7 @@ const app = new Vue({
             {
               name: 'Riccardo',
               img: 'img/avatar_5.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -191,6 +198,7 @@ const app = new Vue({
             {
               name: 'Alessia',
               img: 'img/avatar_6.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -211,6 +219,7 @@ const app = new Vue({
             {
               name: 'Jack',
               img: 'img/avatar_7.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -231,6 +240,7 @@ const app = new Vue({
               {
               name: 'Mike',
               img: 'img/avatar_8.jpg',
+              visible: true,
               messages: [
 
                   {            
@@ -300,7 +310,28 @@ const app = new Vue({
 
             this.user[this.active].messages.push(msgAnswer);
         
-        }   
+        },
+
+        /*funzione che mostra gli utenti il cui nome contiene una o più lettere digitate 
+          all'interno dell'input di ricerca*/
+        filterChat() {
+
+            for (let i = 0; i < this.user.length; i++) {
+            
+                let userName = this.user[i].name.toUpperCase();
+
+                if (userName.includes(this.searchValue.toUpperCase())) {
+                
+                    this.user[i].visible = true;
+                
+                } else {
+
+                    this.user[i].visible = false;
+
+                }
+            
+            }
+        }
     
     }
 
