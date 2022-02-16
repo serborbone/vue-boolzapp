@@ -280,7 +280,6 @@
   color: grey;
   font-size: 12px;
   text-align: right;
-  margin-top: 10px;
 }
 
 .msg-box {
@@ -288,11 +287,67 @@
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 12px;
+  position: relative;
 }
 
 .msg-other {
   background-color: #fff;
 }
+
+/* Menu a tendina del messaggio */
+
+.text-wrap {
+  float: left;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.menu-wrap {
+  width: 50px;
+  float: right;
+  text-align: right;
+  width: 10%;
+}
+
+.menu-wrap .arrow-btn {
+  color: #6B7377;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+}
+
+.menu-msg {
+  border: 1px solid #000;
+  width: 70%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  font-size: 14px;
+  position: absolute;
+  right: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  z-index: 100;
+  padding: 10px;
+}
+
+.menu-msg .info-msg {
+  margin-bottom: 5px;
+}
+
+.menu-msg .info-msg, .del-msg {
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.menu-msg .info-msg:hover, .del-msg:hover {
+  background-color: #f3f3f3;
+}
+
+/* Fine menu a tendina */
+
 
 /* SEZIONE INVIO MESSAGGIO */
 .input-msg {
@@ -333,4 +388,8 @@
 
 .d-none {
   display: none;
+}
+
+.d-flex {
+  display: flex;
 }

@@ -147,9 +147,27 @@
                       <div class="msg-wrap">
                           
                           <!-- MESSAGGI -->
-                          <div class="msg-container" v-for="message in user[active].messages">
+                          <div class="msg-container" v-for="(message, index) in user[active].messages">
                               <div class="msg-box" :class="message.status == 'sent'? 'my-msg': 'msg-other' ">
-                                {{message.text}}
+                                
+
+                                <div class="text-wrap">
+                                    {{message.text}}
+                                </div>
+                                
+                                <!-- Container del menu a tendina -->
+                                <div class="menu-wrap">
+                                    <span class="arrow-btn" @click="menuMsg(index)"><i class="fa-solid fa-angle-down"></i></span>
+                                    
+                                    <div class="menu-msg" :class="message.menuMsgVisible == true? 'd-flex': 'd-none' " >
+                                        <div class="info-msg">Info messaggio</div>
+                                        
+                                        <!-- Cliccando posso cancellare il messaggio -->
+                                        <div class="del-msg" @click="deleteMsg(index)">Elimina messaggio</div>
+                                    </div>
+
+                                </div>
+
                                 <div class="hour-msg">{{message.date}}</div>
                               </div>
                           </div>
