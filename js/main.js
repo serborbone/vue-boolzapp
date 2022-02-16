@@ -270,17 +270,35 @@ const app = new Vue({
         //pusho in messages il testo che ho scritto nell'input così da mostrarlo in chat
         sendMessage() {
 
-            this.user[this.active].messages.push({date: '10/01/2020 16:15:22', text: this.inputValue, status: 'sent', });
+            const msgToSend = {
+
+                date: '10/01/2020 16:15:22', 
+                text: this.inputValue, 
+                status: 'sent',
+
+            }
+
+            this.user[this.active].messages.push(msgToSend);
+
+            //svuoto il campo input
             this.inputValue = '';
 
             //chiamo la funzione con il messaggio di risposta in ritardo di 1 secondo
             setTimeout(this.answerMessage, 1000);
         },
 
+        //pusho in messages un messaggio di risposta che vado a chiamare nella funzione sendMessage()
         answerMessage() {
 
-            //pusho in messages un messaggio di risposta che vado a chiamare nella funzione sendMessage()
-            this.user[this.active].messages.push({date: '10/01/2020 16:15:22', text: 'ok', status: 'received', });
+            const msgAnswer = {
+
+                date: '10/01/2020 16:15:22', 
+                text: 'ok', 
+                status: 'received'
+
+            }
+
+            this.user[this.active].messages.push(msgAnswer);
         
         }   
     
