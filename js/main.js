@@ -321,7 +321,11 @@ const app = new Vue({
 
             }
 
-            this.user[this.active].messages.push(msgToSend);
+            if (this.inputValue !== '') {
+
+                this.user[this.active].messages.push(msgToSend);
+
+            }
 
             //svuoto il campo input
             this.inputValue = '';
