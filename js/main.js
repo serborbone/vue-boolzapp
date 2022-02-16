@@ -324,6 +324,7 @@ const app = new Vue({
             if (this.inputValue !== '') {
 
                 this.user[this.active].messages.push(msgToSend);
+                setTimeout(this.answerMessage, 1000);
 
             }
 
@@ -331,7 +332,6 @@ const app = new Vue({
             this.inputValue = '';
 
             //chiamo la funzione con il messaggio di risposta in ritardo di 1 secondo
-            setTimeout(this.answerMessage, 1000);
         },
 
         //pusho in messages un messaggio di risposta che vado a chiamare nella funzione sendMessage()
