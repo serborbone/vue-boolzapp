@@ -214,6 +214,9 @@
 .info-current-chat {
   height: 50px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .current-chat-propic {
@@ -227,7 +230,7 @@
   height: 100%;
 }
 
-.current-last-acc, .hour-access {
+.current-last-acc {
   font-size: 12px;
   color: grey;
   margin-top: 1px;
@@ -318,7 +321,6 @@
 }
 
 .menu-msg {
-  border: 1px solid #000;
   width: 70%;
   background-color: #fff;
   flex-direction: column;
@@ -331,6 +333,7 @@
   border-radius: 3px;
   z-index: 100;
   padding: 10px;
+  box-shadow: 0px 0px 5px #6B7377;
 }
 
 .menu-msg .info-msg {
@@ -343,7 +346,7 @@
 }
 
 .menu-msg .info-msg:hover, .del-msg:hover {
-  background-color: #f3f3f3;
+  background-color: #f9f9f9;
 }
 
 /* Fine menu a tendina */

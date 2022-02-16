@@ -128,8 +128,7 @@
                       <!-- NOME UTENTE chat aperta -->
                       <div class="info-current-chat">
                           <span class="current-user">{{user[active].name}}</span>
-                          <div class="current-last-acc">Ultimo accesso oggi alle 10/01/2020</div>
-                          <div class="hour-access">16:15:22</div>
+                          <div class="current-last-acc">Ultimo accesso oggi alle {{dataAccesso}}</div>
                       </div>
 
                       <!-- ICONE CHAT -->
@@ -202,6 +201,8 @@
       <!-- JAVASCRIPT -->
 
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+      <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+      <script>dayjs().format()</script>
       <script type="text/javascript" src="js/main.js"></script>
   </body>
 

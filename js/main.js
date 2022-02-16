@@ -9,6 +9,8 @@ const app = new Vue({
 
         searchValue: '',
 
+        dataAccesso: dayjs().format('HH:mm'),
+
         user: [
         
             {
@@ -18,7 +20,7 @@ const app = new Vue({
               messages: [
 
                   {            
-                      date: '10/01/2020 16:15:22',
+                      date: dayjs().format('DD/MM/YYYY HH:mm'),
                       text: 'Hai portato a spasso il cane?',
                       status: 'sent',
                       menuMsgVisible: false,
@@ -314,7 +316,7 @@ const app = new Vue({
 
             const msgToSend = {
 
-                date: '10/01/2020 16:15:22', 
+                date: dayjs().format('DD/MM/YYYY HH:mm'), 
                 text: this.inputValue, 
                 status: 'sent',
                 menuMsgVisible: false,
@@ -339,7 +341,7 @@ const app = new Vue({
 
             const msgAnswer = {
 
-                date: '10/01/2020 16:15:22', 
+                date: dayjs().format('DD/MM/YYYY HH:mm'), 
                 text: 'ok', 
                 status: 'received',
                 menuMsgVisible: false,
